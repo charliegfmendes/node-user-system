@@ -1,6 +1,6 @@
 {
   "name": "node-user-system",
-  "version": "v0.1.0",
+  "version": "v0.2.0",
   "description": "A framework for building Node.js user systems easily",
   "main": "index.js",
   "repository": "https://github.com/gabrielrfmendes/node-user-system.git",
