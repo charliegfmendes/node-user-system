@@ -11,5 +11,9 @@
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^8.5.1",
     "require-dir": "^1.2.0"
+  },
+  "keywords": ["API", "REST", "User system", "MySQL", "sequelize", "MongoDB", "mongoose"],
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/"
   }
 }
