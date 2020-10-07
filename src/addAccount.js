@@ -11,7 +11,7 @@ const existingEmail = (data) => `An account is already associated with ${data.em
 
 async function create(data) {
     const firstActivity = new UserActivity({
-        changeDescription: "Created account"
+        activity: "Created account"
     });
     data.id = firstActivity.id;
     data.password = await bcrypt.hash(data.password, 10);
