@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { User } = require('../../../models');
 const Device = require('../../../src/models/Device');
+const UserActivity = require('../../../src/models/UserActivity');
 const { secret } = require('../../../src/secret.json');
 const { mobileNumberOrEmail } = require('./');
 
@@ -35,7 +36,11 @@ async function read(account, data) {
             userId: account.id,
             UA: data.UA
         });
+        const access = new UserActivity({
+            activity: `Access on ${data.UA}`
+        });
         device.save();
+        access.save();
         account.password = 'secret';
         return { account, token }
     }
