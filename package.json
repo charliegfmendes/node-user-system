@@ -1,6 +1,6 @@
 {
   "name": "node-user-system",
-  "version": "v1.0.0",
+  "version": "v1.1.1",
   "description": "A framework for building Node.js user systems easily",
   "main": "index.js",
   "repository": "https://github.com/gabrielrfmendes/node-user-system.git",
@@ -12,8 +12,16 @@
     "jsonwebtoken": "^8.5.1",
     "require-dir": "^1.2.0"
   },
-  "keywords": ["API", "REST", "User system", "MySQL", "sequelize", "MongoDB", "mongoose"],
-  "publishConfig": { 
+  "keywords": [
+    "API",
+    "REST",
+    "User system",
+    "MySQL",
+    "sequelize",
+    "MongoDB",
+    "mongoose"
+  ],
+  "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   }
 }
