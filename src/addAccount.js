@@ -1,8 +1,8 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { User } = require('../../../models');
-const Device = require('../../../src/models/Device');
-const UserActivity = require('../../../src/models/UserActivity');
+const requireDir = require('require-dir');
+const { Device, UserActivity } = requireDir('../../../models');
 const { secret } = require('../../../src/secret.json');
 const { mobileNumberOrEmail } = require('./');
 
