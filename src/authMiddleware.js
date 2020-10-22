@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const Device = require('../../../src/models/Device');
+const Device = require('../../../models');
 const { secret } = require('../../../src/secret.json');
 
 module.exports = async (req, res, next) => {
