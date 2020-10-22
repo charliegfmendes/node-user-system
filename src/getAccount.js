@@ -37,7 +37,9 @@ async function read(account, data) {
             UA: data.UA
         });
         const access = new UserActivity({
-            activity: `Access on ${data.UA}`
+            activity: `Access on ${data.UA}`,
+            by: account.id,
+            UA: data.UA
         });
         device.save();
         access.save();
