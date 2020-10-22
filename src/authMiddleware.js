@@ -13,7 +13,8 @@ module.exports = async (req, res, next) => {
         var [ scheme, token ] = parts;
 
         if (!/^Bearer$/i.test(scheme)) res.json('Access denied');
-        const device = await Device.findOne({ token });
+        const query = Device.where({ token });
+        const device = await query.findOne();
         if(!device) {
             res.json('Access denied')
         } else if (device.UA ==! UA) {
