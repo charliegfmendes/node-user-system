@@ -1,4 +1,4 @@
-const Device = require('../../../models/Device');
+const Device = require('../../../src/models/Device');
 
 module.exports = async (req, res) => {
     const currentDevice = await Device.findById(req.device)
