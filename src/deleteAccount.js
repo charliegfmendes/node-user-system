@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const { User } = require('../../../models');
-const Device = require('../../../models/Device');
+const requireDir = require('require-dir');
+const { Device, UserActivity } = require('../../../models');
 
 module.exports = async (req, res) => {
     const id = req.accountId;
@@ -12,6 +13,7 @@ module.exports = async (req, res) => {
     } else {
         await User.destroy({where: { id }});
         await Device.deleteMany({ userId: id });
+        await UserActivity.deleteMany({ by: id });
         res.json('Deleted account')
     }
 }
